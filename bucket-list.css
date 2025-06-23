@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to right, #f0f4f8, #e0ecff);
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.bucket-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bucket-list li {
+  margin-bottom: 14px;
+}
+
+/* Common label style */
+.bucket-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  border-left: 6px solid transparent;
+}
+
+/* ✅ Completed item styling */
+label.completed {
+  background-color: #d4edda;
+  color: #155724;
+  text-decoration: line-through;
+  border-left-color: #28a745;
+}
+
+/* ⏳ Pending item styling */
+label.pending {
+  background-color: #fff3cd;
+  color: #856404;
+  text-decoration: none;
+  border-left-color: #ffc107;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #28a745;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .bucket-list label {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+}
